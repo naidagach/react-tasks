@@ -1,0 +1,264 @@
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  margin: 50px;
+  font: 600 40px arial;
+}
+
+section {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center   ;
+
+  h2 {
+      text-align: center;
+      font: 600 36px arial;
+      letter-spacing: 1px;
+  }
+
+  >div {
+      border: 3px solid blue;
+      border-radius: 25px;
+      padding: 20px 50px;
+  }
+
+  .elave {
+      margin: 20px 0;
+      min-width: 400px;
+      text-align: center;
+
+      input {
+          width: 300px;
+          padding-left: 20px;
+      }
+
+      button {
+          width: 100px;
+      }
+  }
+
+  input {
+      border-radius: 10px;
+      height: 25px;
+      border: 2px solid blue;
+      padding-left: 10px;
+      outline: none;
+  }
+
+  input::placeholder {
+      font: 500 14px arial;
+      color: black
+  }
+
+  button {
+      border: 1px solid blue;
+      background-color: rgb(60, 235, 60);
+      padding: 7px 10px;
+      margin: 0 7px;
+      border-radius: 10px;
+      min-width: 60px;
+      text-align: center;
+      font: 500 14px arial;
+  }
+
+  #demo,
+  #demo2 {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+  }
+
+  .sil {
+      background-color: rgb(255, 30, 30);
+      border: none;
+  }
+
+  .duzelis {
+      background-color: cadetblue;
+      border: none;
+  }
+
+  .geri {
+      background-color: grey;
+      border: none;
+  }
+
+  #demo2 {
+      margin-top: 20px;
+  }
+
+  #demo,
+  #demo2 {
+      input:disabled {
+          color: inherit;
+      }
+  }
+
+  .tamSil {
+      background-color: rgb(182, 19, 19);
+      border: none;
+  }
+
+  .inpDiv {
+      display: flex;
+      gap: 5px;
+  }
+}
+#list{
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p{
+        font: 300 1.3em Helvetica;
+        color: #403f3f;
+        width: 60%;
+    }
+}
+#panel{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+    margin: 20px;
+    border: 1px solid #cfdae0;
+    border-radius: 12px;
+    h1{
+        font-size: 30px;
+    }
+}
+.gridParent {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    div, button{
+        border: 1px solid #cfdae0;
+        border-radius: 12px;
+        padding: 7px 10px;
+        cursor: pointer;
+    }
+    p{
+        font: 300 1.2em Helvetica;
+    }
+    button{
+        font: 300 1.2em Helvetica;
+        margin: 5px 0 0 8px;
+        transition-duration: .3s;
+        &:hover{transform: scale(1.03);};
+    }
+    input, select{
+        font-size: 20px;
+        padding: 7px;
+        border: 1px solid #cfdae0;
+        border-radius: 12px;
+        width: 90%;
+        color: #304874;
+    }
+    input::placeholder{
+        color: #304874;
+    }
+    }
+
+#div5, #div7{
+    background-color: #304874;
+    color: white;
+    height: 60px;
+    margin: 0;
+    /* margin: ; */
+}
+#div5{
+    height: 60px;
+    padding: 0 7px;
+}
+#div6{
+    place-self: center;
+    width: 95%;
+    div{
+        display: flex;
+        flex-direction: column ;
+        gap: 7px;
+        align-items: center;
+    }
+    button{
+        background-color: #304874;
+        width: 60%;
+        margin: 5px auto;
+        color: white;
+        display: flex;
+        justify-content: center;
+    }
+
+}
+#div1{
+    position: relative;
+}
+#isciler{
+    width: 100% ;
+}
+#axtaris{
+    background-color: #fff;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 700px;
+    font: 400 1em Helvetica;
+    padding: 7px;
+    border: 1px solid #cfdae0;
+    border-radius: 12px;
+    p{
+        white-space: nowrap;
+        text-align: center;
+        margin: 10px;
+    }
+}
+
+@media only screen and (min-width:600px){
+    #panel{
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+@media only screen and (min-width:768px){
+    .gridParent{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-column-gap: 15px;
+        grid-row-gap: 15px;
+    }
+    #div6{
+        div{
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            #inpAd {
+                width: 50%;
+            }
+            #inpAge{
+                width: 20%;
+            }
+            #inpSahe{
+                width: 30%;
+            }
+        }
+    }
+    #div1 { grid-area: 1 / 1 / 2 / 2; }
+    #div2 { grid-area: 1 / 2 / 2 / 3; }
+    #div3 { grid-area: 2 / 1 / 3 / 2; }
+    #div4 { grid-area: 2 / 2 / 3 / 3; }
+    #div6 { grid-area: 4 / 1 / 4 / 3; }
+    #div5 { grid-area: 3 / 1 / 5 / 2; }
+    #div7 { grid-area: 3 / 2 / 5 / 3; }
+    
+    #isciler{
+        width: 50%;
+     }
+}
